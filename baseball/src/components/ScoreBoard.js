@@ -1,6 +1,15 @@
+//User records activity of player at bat
+//Series of buttons: strike, ball, hit and foul
+//MVP includes strike, ball, hit and foul button
+//Logic:
+//User can increase the number of strikes, balls, hits, and fouls
+//Reset count to 0 for hit input
+//Reset count to 0 for 3 strikes
+//Reset count to 0 for 4 balls
+//Foul increments strikes +1
+
 //TODO: STEP 1 - Import the useState hook.
 import React, { useState } from "react";
-import "./App.css";
 import BottomRow from "./BottomRow";
 
 
@@ -11,6 +20,7 @@ const [homeCount, setHomeCount] = useState(0);
 const [awayCount, setAwayCount] = useState(0);
 const [homeFieldGoal, setHomeFieldGoal] = useState(0);
 const [awayFieldGoal, setAwayFieldGoal] = useState(0);
+const [inn, setInn] = useState(0)
 
 
 
@@ -25,7 +35,10 @@ const [awayFieldGoal, setAwayFieldGoal] = useState(0);
 
             <div className="home__score">{homeCount + homeFieldGoal}</div>
           </div>
-          <div className="timer" >00:03</div>
+  <div className="timer" >Inn
+  <div className="home__score">{inn}</div>
+  
+  </div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
             <div className="away__score">{awayCount + awayFieldGoal}</div>
