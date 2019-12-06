@@ -38,6 +38,15 @@ const BottomRow = () => {
     }
   }
 
+  const handleOuts = () => {
+    if(out > 1) {
+      setOut(0)
+    } else {
+      setOut(out + 1)
+    }
+    console.log(out,"out count")
+  }
+
   return (
     <div className="bottomRow">
       <div className="down">
@@ -63,7 +72,7 @@ const BottomRow = () => {
           <button className="homeButtons__fieldGoal" onClick={handleStrike}>Strike</button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown" onClick={() => setOut()}>Out</button>
+          <button className="awayButtons__touchdown" onClick={handleOuts}>Out</button>
           <button className="awayButtons__fieldGoal" onClick={handleFouls}>Foul</button>
         </div>
       </section>

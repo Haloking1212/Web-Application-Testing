@@ -1,9 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from "@testing-library/react";
 import App from './App';
+import BottomRow from './components/BottomRow';
+import ScoreBoard from './components/ScoreBoard';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+
+
+test("App renders without crashing", () => {
+  const component = render(<App />);
+})
+
+test("bottomrow renders", () => {
+  const bottomRow = render(<BottomRow />)
+})
+
+test("scoreboard renders", () => {
+  const scoreboard = render(<ScoreBoard />)
+})
